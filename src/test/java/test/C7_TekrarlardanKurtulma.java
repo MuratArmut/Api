@@ -43,11 +43,5 @@ public class C7_TekrarlardanKurtulma {
 
 
 
-
-
-
-
-
-
     }
 }
