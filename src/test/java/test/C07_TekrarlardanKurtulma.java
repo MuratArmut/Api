@@ -1,13 +1,12 @@
 package test;
 
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class C7_TekrarlardanKurtulma {
+public class C07_TekrarlardanKurtulma {
       /*
     https://restful-booker.herokuapp.com/booking/10 url’ine bir GET request gonderdigimizde donen Response’un,
             status code’unun 200,

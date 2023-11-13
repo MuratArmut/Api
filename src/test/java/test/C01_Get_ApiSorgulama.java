@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class C1_Get_ApiSorgulama {
+public class C01_Get_ApiSorgulama {
     /*
 C1_Get_ApiSorgulama
 https://restful-booker.herokuapp.com/booking/83 url'ine bir GET request

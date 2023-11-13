@@ -4,7 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
-public class C8_JSONArrayKullanimi {
+public class C08_JSONArrayKullanimi {
      /*
     {
     "firstName": "John",

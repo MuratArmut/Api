@@ -3,7 +3,7 @@ package test;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
-public class C3_JSONDataOlusturma {
+public class C03_JSONDataOlusturma {
    /*
     Asagidaki JSON Objesini olusturup konsolda yazdirin.
     {

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class C4_PUT_ResponseAssert {
+public class C04_PUT_ResponseAssert {
 /*
     https://jsonplaceholder.typicode.com/posts/70 url’ine asagidaki Json formatindaki body ile
         bir PUT request gonderdigimizde
