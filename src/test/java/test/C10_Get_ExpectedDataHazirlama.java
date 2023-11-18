@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 public class C10_Get_ExpectedDataHazirlama {
-
        /*
     https://jsonplaceholder.typicode.com/posts/22 url'ine
     bir GET request yolladigimizda donen response body’sinin
@@ -49,7 +48,7 @@ public class C10_Get_ExpectedDataHazirlama {
 
 
         JsonPath respJP=response.jsonPath(); //Dönen cevabın içindeki  verileri inceleyebilmek için
-        // bir JSONPath Objesi içine dönen cevabı yerleştirdik
+                                            // bir JSONPath Objesi içine dönen cevabı yerleştirdik
 
         Assert.assertEquals(expBody.get("userId"),respJP.get("userId"));
         Assert.assertEquals(expBody.get("id"),respJP.get("id"));
@@ -60,5 +59,8 @@ public class C10_Get_ExpectedDataHazirlama {
 
 
     }
+
+
+
 
 }

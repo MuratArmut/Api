@@ -6,11 +6,11 @@ import io.restassured.response.Response;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
 public class C11_POST_ExpectedBody {
-
     /*
     https://restful-booker.herokuapp.com/booking url’ine
     asagidaki body'ye sahip bir POST request gonderdigimizde
@@ -27,6 +27,7 @@ public class C11_POST_ExpectedBody {
     	                                  },
     	                "additionalneeds" : "wi-fi"
     	            }
+
 
     	            	Response Body - Expected Body
     	           {
@@ -48,7 +49,7 @@ public class C11_POST_ExpectedBody {
 
     @Test
     public void postExp(){
-        //1-
+    //1-
         String url="https://restful-booker.herokuapp.com/booking";
 
         JSONObject innerDate=new JSONObject();
@@ -65,7 +66,7 @@ public class C11_POST_ExpectedBody {
 
 
 
-        //2-
+    //2-
 
         JSONObject expBody = new JSONObject();
         expBody.put("bookingid",24);
@@ -75,18 +76,19 @@ public class C11_POST_ExpectedBody {
 
 
 
-        //3-
+    //3-
         Response response=given()
-                .contentType(ContentType.JSON)
-                .when()
-                .body(reqBody.toString()).post(url);
+                                    .contentType(ContentType.JSON)
+                                .when()
+                                    .body(reqBody.toString()).post(url);
 
 
 
 
 
-        //4-
+    //4-
         JsonPath resJP=response.jsonPath();
+
         assertEquals(expBody.getJSONObject("booking").get("firstname"),resJP.get("booking.firstname"));
         assertEquals(expBody.getJSONObject("booking").get("lastname"),resJP.get("booking.lastname"));
         assertEquals(expBody.getJSONObject("booking").get("totalprice"),resJP.get("booking.totalprice"));
@@ -94,6 +96,14 @@ public class C11_POST_ExpectedBody {
         assertEquals(expBody.getJSONObject("booking").get("additionalneeds"),resJP.get("booking.additionalneeds"));
         assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkin"),resJP.get("booking.bookingdates.checkin"));
         assertEquals(expBody.getJSONObject("booking").getJSONObject("bookingdates").get("checkout"),resJP.get("booking.bookingdates.checkout"));
+
+
+
+
+
+
+
+
 
     }
 }
